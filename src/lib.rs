@@ -1,9 +1,11 @@
 use js_sys::Math;
 use web_sys;
 use wasm_bindgen::prelude::*;
+import * as wasm from './my_wasm_project_bg';
+
 
 // Roll a number of dice with a certain number of sides each
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "roll_dice")]
 pub fn roll_dice(num_dice: u32, num_sides: u32) -> u32 {
     let mut total = 0;
     for _ in 0..num_dice {
