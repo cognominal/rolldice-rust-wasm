@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Roll Dice</title>
+  </head>
+  <body>
+    <h1>Roll Dice</h1>
+    <p>Click the button to roll the dice:</p>
+    <button id="roll-button">Roll</button>
+    <p id="result"></p>
+    <script type="module">
+      import { roll_dice } from "./pkg/my_rust_project.js";
+
+      const rollButton = document.getElementById("roll-button");
+      const result = document.getElementById("result");
+
+      rollButton.addEventListener("click", () => {
+        const numDice = 2;
+        const numSides = 6;
+        console.log("Rolling dice...");
+        const rollResult = roll_dice(numDice, numSides);
+        console.log(`You rolled: ${rollResult}`);
+        result.textContent = `You rolled: ${rollResult}`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+# Rust/Cargo
+/target/
+Cargo.lock
+
+# WebAssembly
+wasm32-unknown-unknown/
+*.wasm
+*.wasm.map
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+*.pdb
+*.dSYM/
