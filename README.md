@@ -13,11 +13,11 @@ as I asked to github copilot.
 
 
 I started by using the quick [chat copilot](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat), iterated on /createWorkspace prompt and eventually pressed the button `create Workspace`.
-There was many thing missing or astray but that was better than doing it from scratch
+There was many thing missing or astray but that was better than doing it from scratch.
 
 ## Not quite there yet
 
-Uncaught TypeError: Cannot read properties of undefined (reading 'roll_dice')
+Uncaught TypeError: Cannot read properties of undefined (reading 'roll_dice').
 
 ## TBD
 
@@ -43,10 +43,16 @@ This project requires the following dependencies:
 - `index.html`: Entry point for the web application, including the "Roll Dice" button and the result display.
 - `README.md`: Documentation for the project.
 
-## Build instruction
+## Build and run instructions
 
-Assuming that rust and node are installed
+Assuming that rust and node are installed, as well as the vscode rust extensions.
+With vscode the [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension should build the rust part as it changes.
 
 - cargo install wasm-pack                  # maybe or not, cuz I added it as dev dependancy
-- cargo build                              # build the rust part
+- cargo build                              # build the rust part, done by rust Analyser
 - wasm-pack build --target web --release   # build the web part
+
+You should serve index.html from some web server.
+In vscode, the [live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension can be used.
+You can run it from the `index.html` contextual menu and it will
+pop up a browser window.
