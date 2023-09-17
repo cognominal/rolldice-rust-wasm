@@ -3,12 +3,12 @@
 ## the project
 
 This project is a sample web application that allows the user to roll dice and display the result on the page.
-The roll is done by pressing the (button)[https://github.com/cognominal/rolldice-rust-wasm/blob/main/index.html#L10]
+The roll is done by pressing the [button](https://github.com/cognominal/rolldice-rust-wasm/blob/main/index.html#L10)
 this calls 
 [roll_dice](https://github.com/cognominal/rolldice-rust-wasm/blob/main/src/lib.rs#L7)
 in src/lib.rs which has been compiled to was.
 [add_roll_to_dom](https://github.com/cognominal/rolldice-rust-wasm/blob/main/src/lib.rs#L17) call back into js land.
-This should probably done in js but it shows the use of the `web_sys`crate
+This should probably done in js but it shows the use of the `web_sys` crate
 as I asked to github copilot.
 
 
